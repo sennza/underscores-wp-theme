@@ -1,0 +1,17 @@
+/* TEAM */
+	Developer: {%= author_name %}
+	Contact:   {%= author_email %}
+	URI:       {%= author_url %}
+
+/* THANKS */
+	Template Design: Sennza
+	URI:             http://www.sennza.com.ua
+	Twitter:         @sennza
+	
+	Template Design: Bronson Quick
+	URI:             http://bronsonquick.com.au
+	Twitter:         @bronsonquick
+	
+/* SITE */
+	Created:  {%= grunt.template.today("yyyy-mm-dd") %}
+	Template: https://github.com/sennza/underscores-wp-theme

@@ -1,0 +1,134 @@
+/**
+ *
+ * Licensed under the MIT License
+ */
+
+'use strict';
+
+// Basic template description
+exports.description = 'Create a WordPress theme.';
+
+// Template-specific notes to be displayed before question prompts.
+exports.notes = 'Answer a few questions and you\'ll have an amazing WordPress theme in no time!';
+
+// Template-specific notes to be displayed after the question prompts.
+exports.after = 'You\'re done so pat yourself on the back and get busy!';
+
+// Any existing file or directory matching this wildcard will cause a warning.
+exports.warnOn = '*';
+
+// The actual init template
+exports.template = function( grunt, init, done ) {
+	init.process( {}, [
+		// Prompt for these values.
+		init.prompt( 'title', 'Sennza Theme' ),
+		{
+			name   : 'prefix',
+			message: 'PHP function prefix (alpha and underscore characters only)',
+			default: 'sennza'
+		},
+		init.prompt( 'description', 'Yet Another Sennza Theme' ),
+		init.prompt( 'homepage', 'http://www.sennza.com.au/' ),
+		init.prompt( 'author_name', 'Bronson Quick' ),
+		init.prompt( 'author_email', 'bronson@sennza.com.au' ),
+		init.prompt( 'author_url', 'http://www.bronsonquick.com.au/' ),
+		init.prompt( 'repository', 'git@github.com:sennza/underscores-wp-theme.git' ),
+		{
+			name: 'four_oh_four_template',
+			message: 'Do you want a 404.php? [y/N]',
+			default: 'y'
+		},
+		{
+			name: 'archive_template',
+			message: 'Do you want an archive.php? [y/N]',
+			default: 'y'
+		},
+		{
+			name: 'comments_template',
+			message: 'Do you want an comments.php? [y/N]',
+			default: 'y'
+		},
+		{
+			name: 'image_template',
+			message: 'Do you want an image.php? [y/N]',
+			default: 'y'
+		},
+		{
+			name: 'search_template',
+			message: 'Do you want an search.php? [y/N]',
+			default: 'y'
+		},
+		{
+			name: 'search_form_template',
+			message: 'Do you want an searchform.php? [y/N]',
+			default: 'y'
+		}
+	], function( err, props ) {
+		props.keywords = [];
+		props.version = '0.1.0';
+		props.devDependencies = {
+			'grunt': '~0.4.1',
+			'matchdep': '~0.1.2',
+			'grunt-contrib-concat': '~0.1.2',
+			'grunt-contrib-uglify': '~0.1.1',
+			'grunt-contrib-cssmin': '~0.6.0',
+			'grunt-contrib-jshint': '~0.1.1',
+			'grunt-contrib-watch': '~0.2.0',
+			'grunt-contrib-sass': '~0.2.2',
+			'grunt-contrib-compass':  '~0.5.0',
+			'grunt-cssjanus': "~0.1.1",
+		};
+		
+		// Sanitize names where we need to for PHP/JS
+		props.name = props.title.replace( /\s+/g, '-' ).toLowerCase();
+		// Theme language
+		props.language = props.title.replace('/[^a-z_]/i', '').replace(/ /g, '').toLowerCase();
+		// Development prefix (i.e. to prefix PHP function names, variables)
+		props.prefix = props.prefix.replace('/[^a-z_]/i', '').toLowerCase();
+		// Development prefix in all caps (e.g. for constants)
+		props.prefix_caps = props.prefix.toUpperCase();
+		// An additional value, safe to use as a JavaScript identifier.
+		props.js_safe_name = props.name.replace(/[\W_]+/g, '_').replace(/^(\d)/, '_$1');
+		// An additional value that won't conflict with NodeUnit unit tests.
+		props.js_test_safe_name = props.js_safe_name === 'test' ? 'myTest' : props.js_safe_name;
+		props.js_safe_name_caps = props.js_safe_name.toUpperCase();
+
+		// Files to copy and process
+		var files = init.filesToCopy( props );
+		// Did they want a 404 page?
+		if ( props.four_oh_four_template.toUpperCase()[0] == "N") {
+				delete files[ '404.php'];
+		}
+		//Do they want an archive page?
+		if ( props.archive_template.toUpperCase()[0] == "N") {
+				delete files[ 'archive.php'];
+		}
+		//Do they want an comments page?
+		if ( props.comments_template.toUpperCase()[0] == "N") {
+				delete files[ 'comments.php'];
+		}
+		//Do they want an image page?
+		if ( props.image_template.toUpperCase()[0] == "N") {
+				delete files[ 'image.php'];
+		}
+		//Do they want an search page?
+		if ( props.search_template.toUpperCase()[0] == "N") {
+				delete files[ 'search.php'];
+		}
+		//Do they want an search form page?
+		if ( props.search_form_template.toUpperCase()[0] == "N") {
+				delete files[ 'searchform.php'];
+		}
+		
+		console.log( files );
+		
+		// Actually copy and process files
+		init.copyAndProcess( files, props, {noProcess: 'screenshot.png'} );
+		
+		// Generate package.json file
+		init.writePackageJSON( 'package.json', props );
+		
+		// Done!
+		done();
+	});
+};

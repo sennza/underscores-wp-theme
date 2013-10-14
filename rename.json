@@ -1,0 +1,3 @@
+{
+	"languages/_s.pot": "languages/{%= prefix %}.pot"
+}
