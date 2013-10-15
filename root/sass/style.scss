@@ -1,0 +1,29 @@
+/*!
+ * Theme Name:  {%= title %}
+ * Theme URI:   {%= homepage %}
+ * Description: {%= description %}
+ * Author:      {%= author_name %}: {%= author_email %}
+ * Author URI:  {%= author_url %}
+ * Version:     0.1.0
+ * Tags:
+ * Text Domain: {%= language %}
+ * Domain Path: /languages/
+ *
+ * License:     GPLv2+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+@import "reset";
+@import "global";
+@import "links";
+@import "alignment";
+@import "accessibility";
+@import "clearing";
+@import "menu";
+@import "content";
+@import "asides";
+@import "media";
+@import "navigation";
+@import "comments";
+@import "widgets";
+@import "infinitescroll";
