@@ -21,6 +21,9 @@ git clone git@github.com:sennza/underscores-wp-theme.git ~/.grunt-init/underscor
 git clone git@github.com:sennza/underscores-wp-theme.git %USERPROFILE%/.grunt-init/underscores-wp-theme
 ```
 
+## Demo
+![Underscores WP Theme](http://www.sennza.com.au/wp-content/uploads/2013/10/underscores-wp-theme.gif "Underscores WP Theme")
+
 ## Usage
 
 At the command-line, cd into an empty directory, for your theme. e.g. wp-content/themes/yourtheme run this command and follow the prompts.
