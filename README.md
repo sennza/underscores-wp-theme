@@ -1,6 +1,6 @@
 # underscores-wp-theme
 
-> Create an [Underscores](https://github.com/Automattic/_s) based WordPress theme with [grunt-init][].
+> Create an [Underscores](https://github.com/Automattic/_s) based WordPress theme with [grunt-init][]. It'll ask you for some basic info and the template files you'd like for your Underscores based theme
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
@@ -35,6 +35,12 @@ Install the NPM modules required to actually process your newly-created project 
 
 ```
 npm install
+```
+
+Run Grunt so it can generate your style.css
+
+```
+grunt
 ```
 
 ##Roadmap
