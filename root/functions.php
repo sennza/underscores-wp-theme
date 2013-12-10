@@ -93,9 +93,6 @@ function {%= prefix %}_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( '{%= prefix %}-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
-	}
 }
 add_action( 'wp_enqueue_scripts', '{%= prefix %}_scripts' );
 

@@ -68,7 +68,7 @@ module.exports = function( grunt ) {
 				tasks: ['compass:dev']
 			},
 			scripts: {
-				files: ['js/src/**/*.js', 'js/vendor/**/*.js'],
+				files: ['js/**/*.js'],
 				tasks: ['jshint', 'concat', 'uglify'],
 				options: {
 					debounceDelay: 500
