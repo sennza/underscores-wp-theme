@@ -98,7 +98,6 @@ function {%= prefix %}_scripts() {
 add_action( 'wp_enqueue_scripts', '{%= prefix %}_scripts' );
 
 /* Let's add the includes. Unused includes will be deleted during setup  */
-foreach (glob( 'inc/*.php' ) as $filename)
-{
-    include $filename;
+foreach ( glob( get_template_directory() . '/inc/*.php' ) as $filename ) {
+	require_once $filename;
 }
