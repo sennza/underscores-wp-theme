@@ -6,13 +6,13 @@
 'use strict';
 
 // Basic template description
-exports.description = 'Create a WordPress theme.';
+exports.description = 'Create a WordPress theme based on _s.';
 
 // Template-specific notes to be displayed before question prompts.
-exports.notes = 'Answer a few questions and you\'ll have an amazing WordPress theme in no time!';
+exports.notes = 'Answer a few questions about the features you want in your theme and we\'ll do the rest!';
 
 // Template-specific notes to be displayed after the question prompts.
-exports.after = 'You\'re done so pat yourself on the back and get busy!';
+exports.after = 'You\'re done! Make sure you run `npm install` then `grunt` so your style.css is built.';
 
 // Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = '*';
