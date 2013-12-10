@@ -72,6 +72,11 @@ exports.template = function( grunt, init, done ) {
 			name: 'jetpack_support',
 			message: 'Will you use be using Jetpack? [y/N]',
 			default: 'y'
+		},
+		{
+			name: 'wpdotcom_support',
+			message: 'Will you use be using this on WordPress.com? [y/N]',
+			default: 'n'
 		}
 
 	], function( err, props ) {
@@ -137,6 +142,10 @@ exports.template = function( grunt, init, done ) {
 		//Will they support Jetpack?
 		if ( props.jetpack_support.toUpperCase()[0] == "N") {
 				delete files[ 'inc/jetpack.php'];
+		}
+		//Will they be using this on WordPress.com?
+		if ( props.wpdotcom_support.toUpperCase()[0] == "N") {
+				delete files[ 'inc/wpcom.php'];
 		}
 		
 		console.log( files );
