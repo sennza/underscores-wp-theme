@@ -1,4 +1,5 @@
 module.exports = function( grunt ) {
+	'use strict';
 
 	// Load all grunt tasks
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -24,7 +25,14 @@ module.exports = function( grunt ) {
 				eqnull:  true,
 				globals: {
 					exports: true,
-					module:  false
+					module:  false,
+					"jQuery": true,
+					"wp": true,
+					"require": true,
+					"document": true,
+					"window": true,
+					"location": true,
+					"navigator": true
 				}
 			}		
 		},
@@ -34,6 +42,15 @@ module.exports = function( grunt ) {
 				src: ['style.css'],
 				ext: '.css'
 			}
+		},
+		cssjanus: {
+			options: {
+				swapLtrRtlInUrl: false
+			},
+			src: [
+				'style.css'
+			],
+			dest: 'rtl.css'
 		},
 		watch:  {
 			sass: {
@@ -66,8 +83,8 @@ module.exports = function( grunt ) {
 	});
 	
 	// Default task.
-	grunt.registerTask( 'default', ['jshint', 'compass', 'cssmin'] );
-	// TODO: Configure build
+	grunt.registerTask( 'default', ['compass', 'cssmin', 'cssjanus', 'jshint'] );
+	grunt.registerTask( 'watch', [ 'compass', 'cssmin', 'cssjanus'] );
 	// grunt.registerTask( 'build', ['default'] );
 
 	grunt.util.linefeed = '\n';
