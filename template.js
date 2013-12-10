@@ -49,11 +49,6 @@ exports.template = function( grunt, init, done ) {
 			default: 'y'
 		},
 		{
-			name: 'image_template',
-			message: 'Do you want an image.php? [y/N]',
-			default: 'y'
-		},
-		{
 			name: 'search_template',
 			message: 'Do you want an search.php? [y/N]',
 			default: 'y'
@@ -122,10 +117,6 @@ exports.template = function( grunt, init, done ) {
 		//Do they want an comments page?
 		if ( props.comments_template.toUpperCase()[0] == "N") {
 				delete files[ 'comments.php'];
-		}
-		//Do they want an image page?
-		if ( props.image_template.toUpperCase()[0] == "N") {
-				delete files[ 'image.php'];
 		}
 		//Do they want an search page?
 		if ( props.search_template.toUpperCase()[0] == "N") {
