@@ -62,7 +62,23 @@ exports.template = function( grunt, init, done ) {
 			name: 'search_form_template',
 			message: 'Do you want an searchform.php? [y/N]',
 			default: 'y'
+		},
+		{
+			name: 'custom_header_include',
+			message: 'Do you want a custom header? [y/N]',
+			default: 'y'
+		},
+		{
+			name: 'customizer_include',
+			message: 'Will you use the theme customizer? [y/N]',
+			default: 'y'
+		},
+		{
+			name: 'jetpack_support',
+			message: 'Will you use be using Jetpack? [y/N]',
+			default: 'y'
 		}
+
 	], function( err, props ) {
 		props.keywords = [];
 		props.version = '0.1.0';
@@ -76,7 +92,7 @@ exports.template = function( grunt, init, done ) {
 			'grunt-contrib-watch': '~0.2.0',
 			'grunt-contrib-sass': '~0.2.2',
 			'grunt-contrib-compass':  '~0.5.0',
-			'grunt-cssjanus': "~0.1.1",
+			'grunt-cssjanus': "~0.1.1"
 		};
 		
 		// Sanitize names where we need to for PHP/JS
@@ -118,6 +134,18 @@ exports.template = function( grunt, init, done ) {
 		//Do they want an search form page?
 		if ( props.search_form_template.toUpperCase()[0] == "N") {
 				delete files[ 'searchform.php'];
+		}
+		//Do they want a custom header?
+		if ( props.custom_header_include.toUpperCase()[0] == "N") {
+				delete files[ 'inc/custom-header.php'];
+		}
+		//Will the use the customizer?
+		if ( props.customizer_include.toUpperCase()[0] == "N") {
+				delete files[ 'inc/customizer.php'];
+		}
+		//Will they support Jetpack?
+		if ( props.jetpack_support.toUpperCase()[0] == "N") {
+				delete files[ 'inc/jetpack.php'];
 		}
 		
 		console.log( files );
