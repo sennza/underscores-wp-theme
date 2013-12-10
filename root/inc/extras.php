@@ -36,8 +36,9 @@ add_filter( 'body_class', '{%= prefix %}_body_classes' );
 function {%= prefix %}_wp_title( $title, $sep ) {
 	global $page, $paged;
 
-	if ( is_feed() )
+	if ( is_feed() ) {
 		return $title;
+	}
 
 	// Add the blog name
 	$title .= get_bloginfo( 'name' );
