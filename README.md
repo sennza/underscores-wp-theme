@@ -1,4 +1,4 @@
-# underscores-wp-theme
+# Generate a custom Underscores theme using Grunt's Project Scaffolding
 
 > Create an [Underscores](https://github.com/Automattic/_s) based WordPress theme with [grunt-init][]. It'll ask you for some basic info and the template files you'd like for your Underscores based theme
 
