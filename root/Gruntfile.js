@@ -1,23 +1,15 @@
 module.exports = function( grunt ) {
 
+	// Load all grunt tasks
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
 	// Project configuration
 	grunt.initConfig( {
 		pkg:    grunt.file.readJSON( 'package.json' ),
-		concat: {
-			options: {
-				stripBanners: true
-			},
-			underscores_wp_theme: {
-				src: [
-					'js/src/customizer.js'
-				],
-				dest: 'js/customizer.js'
-			}
-		},
 		jshint: {
 			all: [
 				'Gruntfile.js',
-				'js/src/**/*.js'
+				'js/**/*.js'
 			],
 			options: {
 				curly:   true,
@@ -35,18 +27,6 @@ module.exports = function( grunt ) {
 					module:  false
 				}
 			}		
-		},
-		uglify: {
-			all: {
-				files: {
-					'js/customizer.js.min.js': ['js/customizer.js']
-				},
-				options: {
-					mangle: {
-						except: ['jQuery']
-					}
-				}
-			}
 		},
 		cssmin: {
 			minify: {
@@ -69,7 +49,7 @@ module.exports = function( grunt ) {
 			},
 			scripts: {
 				files: ['js/**/*.js'],
-				tasks: ['jshint', 'concat', 'uglify'],
+				tasks: ['jshint', 'uglify'],
 				options: {
 					debounceDelay: 500
 				}
@@ -85,17 +65,8 @@ module.exports = function( grunt ) {
 		}
 	});
 	
-	// Load other tasks
-	grunt.loadNpmTasks( 'grunt-contrib-compass' );
-	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-	grunt.loadNpmTasks( 'grunt-contrib-concat' );
-	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	grunt.loadNpmTasks( 'grunt-contrib-sass' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	
 	// Default task.
-	grunt.registerTask( 'default', ['jshint', 'compass', 'concat', 'uglify', 'cssmin'] );
+	grunt.registerTask( 'default', ['jshint', 'compass', 'cssmin'] );
 	// TODO: Configure build
 	// grunt.registerTask( 'build', ['default'] );
 
