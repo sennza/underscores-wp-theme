@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Grunt &amp; Underscores WordPress Theme by sennza</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Grunt &amp; Underscores WordPress Theme</h1>
+        <h2>Generate a custom build of the Underscores WordPress theme using Grunt</h2>
+        <a href="https://github.com/sennza/underscores-wp-theme" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="generate-a-custom-underscores-theme-using-grunts-project-scaffolding" class="anchor" href="#generate-a-custom-underscores-theme-using-grunts-project-scaffolding"><span class="octicon octicon-link"></span></a>Generate a custom Underscores theme using Grunt's Project Scaffolding</h1>
+
+<blockquote>
+<p>Create an <a href="https://github.com/Automattic/_s">Underscores</a> based WordPress theme with <a href="http://gruntjs.com/project-scaffolding">grunt-init</a>. It'll ask you for some basic info and the template files you'd like for your Underscores based theme</p>
+</blockquote>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>If you haven't already done so, install <a href="http://gruntjs.com/project-scaffolding">grunt-init</a>.</p>
+
+<p>Once grunt-init is installed, place this template in your <code>~/.grunt-init/</code> directory. It's recommended that you use git to clone this template into that directory, as follows:</p>
+
+<h3>
+<a name="linuxmac-users" class="anchor" href="#linuxmac-users"><span class="octicon octicon-link"></span></a>Linux/Mac Users</h3>
+
+<pre><code>git clone git@github.com:sennza/underscores-wp-theme.git ~/.grunt-init/underscores-wp-theme
+</code></pre>
+
+<h3>
+<a name="windows-users" class="anchor" href="#windows-users"><span class="octicon octicon-link"></span></a>Windows Users</h3>
+
+<pre><code>git clone git@github.com:sennza/underscores-wp-theme.git %USERPROFILE%/.grunt-init/underscores-wp-theme
+</code></pre>
+
+<h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p><img src="http://www.sennza.com.au/wp-content/uploads/2013/10/underscores-wp-theme.gif" alt="Underscores WP Theme" title="Underscores WP Theme"></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>At the command-line, cd into an empty directory, for your theme. e.g. wp-content/themes/yourtheme run this command and follow the prompts.</p>
+
+<pre><code>grunt-init underscores-wp-theme
+</code></pre>
+
+<p><em>Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files.</em></p>
+
+<p>Install the NPM modules required to actually process your newly-created project by running:</p>
+
+<pre><code>npm install
+</code></pre>
+
+<p>Run Grunt so it can generate your style.css</p>
+
+<pre><code>grunt
+</code></pre>
+
+<h2>
+<a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a>Roadmap</h2>
+
+<ul>
+<li><del>v0.2.0  Add more prompts for files in the <code>inc</code> folder and remove those includes from <code>functions.php</code> if required.</del></li>
+<li>v0.3.0    Add Grunt watch tasks for CSS &amp; JS minification, Compass, CSS Janus for RTL</li>
+<li>v0.4.0    Clean up CSS in <code>sass</code> so it's nested as it's currently only stubs taken from Underscores original style.css</li>
+<li>v0.5.0    Add <a href="https://npmjs.org/package/grunt-webfont">SVG to webfont converter for Grunt</a>
+</li>
+<li>v0.6.0    Add <a href="https://npmjs.org/package/grunt-contrib-imagemin">Minify PNG and JPEG images</a>
+</li>
+</ul><h2>
+<a name="release-history" class="anchor" href="#release-history"><span class="octicon octicon-link"></span></a>Release History</h2>
+
+<ul>
+<li>2013-10-14   v0.1.0   Initial public release</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/sennza/underscores-wp-theme/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/sennza/underscores-wp-theme/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/sennza/underscores-wp-theme"></a> is maintained by <a href="https://github.com/sennza">sennza</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
