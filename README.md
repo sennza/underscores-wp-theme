@@ -49,12 +49,14 @@ grunt
 ##Roadmap
 
 * ~~v0.2.0	Add more prompts for files in the `inc` folder and remove those includes from `functions.php` if required.~~
-* v0.3.0	Add Grunt watch tasks for CSS & JS minification, Compass, CSS Janus for RTL
-* v0.4.0	Clean up CSS in `sass` so it's nested as it's currently only stubs taken from Underscores original style.css
+* ~~v0.3.0	Clean up CSS in `sass` so it's nested as it's currently only stubs taken from Underscores original style.css~~
+* v0.4.0	Add Grunt watch tasks for CSS & JS minification, Compass, CSS Janus for RTL
 * v0.5.0	Add [SVG to webfont converter for Grunt](https://npmjs.org/package/grunt-webfont)
 * v0.6.0	Add [Minify PNG and JPEG images](https://npmjs.org/package/grunt-contrib-imagemin)
 
 
 ## Release History
 
- * 2013-10-14   v0.1.0   Initial public release
+* 2013-12-10	v0.3.0	Nest our Sass files.
+* 2013-12-10	v0.2.0	Yay! A smart way to include files :)
+* 2013-10-14	v0.1.0	Initial public release.
