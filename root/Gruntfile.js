@@ -44,29 +44,27 @@ module.exports = function( grunt ) {
 			}
 		},
 		cssjanus: {
-			options: {
-				swapLtrRtlInUrl: false
-			},
-			src: [
-				'style.css'
-			],
-			dest: 'rtl.css'
+			dev: {
+				options: {
+					swapLtrRtlInUrl: false
+				},
+				src: [
+					'style.css'
+				],
+				dest: 'rtl.css'
+			}
 		},
 		watch:  {
-			sass: {
-				files: ['sass/**/*.scss'],
-				tasks: ['compass'],
+			compass: {
+				files: ['sass/*.scss'],
+				tasks: ['compass:dev', 'cssjanus:dev'],
 				options: {
 					debounceDelay: 500
 				}
 			},
-			compass: {
-				files: ['sass/*.scss'],
-				tasks: ['compass:dev']
-			},
 			scripts: {
 				files: ['js/**/*.js'],
-				tasks: ['jshint', 'uglify'],
+				tasks: ['jshint'],
 				options: {
 					debounceDelay: 500
 				}
@@ -76,16 +74,15 @@ module.exports = function( grunt ) {
 			dev: {
 				options: {
 					sassDir: 'sass',
-					cssDir: '.'
+					cssDir: '.',
+					outputStyle: 'compressed'
 				}
 			}
 		}
 	});
 	
 	// Default task.
-	grunt.registerTask( 'default', ['compass', 'cssmin', 'cssjanus', 'jshint'] );
-	grunt.registerTask( 'watch', [ 'compass', 'cssmin', 'cssjanus'] );
-	// grunt.registerTask( 'build', ['default'] );
+	grunt.registerTask( 'default', ['compass', 'cssmin', 'cssjanus:dev', 'jshint'] );
 
 	grunt.util.linefeed = '\n';
 };

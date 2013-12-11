@@ -46,13 +46,20 @@ Run Grunt so it can generate your style.css
 grunt
 ```
 
+During development run
+
+```
+grunt watch
+```
+
 ##Roadmap
 
 * ~~v0.2.0	Add more prompts for files in the `inc` folder and remove those includes from `functions.php` if required.~~
-* ~~v0.3.0	Clean up CSS in `sass` so it's nested as it's currently only stubs taken from Underscores original style.css~~
-* v0.4.0	Add Grunt watch tasks for CSS & JS minification, Compass, CSS Janus for RTL
+* ~~v0.3.0	Clean up CSS in `sass` so it's nested as it's currently only stubs taken from Underscores original style.css
+* v0.4.0	Add Grunt watch tasks for CSS & JS minification, Compass, CSS Janus for RTL~~
 * v0.5.0	Add [SVG to webfont converter for Grunt](https://npmjs.org/package/grunt-webfont)
 * v0.6.0	Add [Minify PNG and JPEG images](https://npmjs.org/package/grunt-contrib-imagemin)
+* v0.7.0	Add [Minify PNG and JPEG images](https://npmjs.org/package/grunt-contrib-imagemin)
 
 
 ## Release History
