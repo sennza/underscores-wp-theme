@@ -56,14 +56,15 @@ grunt watch
 
 * ~~v0.2.0	Add more prompts for files in the `inc` folder and remove those includes from `functions.php` if required.~~
 * ~~v0.3.0	Clean up CSS in `sass` so it's nested as it's currently only stubs taken from Underscores original style.css~~
-* v0.4.0	Add Grunt watch tasks for CSS & JS minification, Compass, CSS Janus for RTL
+* ~~v0.4.0	Add Grunt watch tasks for CSS & JS minification, Compass, CSS Janus for RTL~~
 * v0.5.0	Add [SVG to webfont converter for Grunt](https://npmjs.org/package/grunt-webfont)
 * v0.6.0	Add [Minify PNG and JPEG images](https://npmjs.org/package/grunt-contrib-imagemin)
 * v0.7.0	Add build task to grunt to generate a theme zip that doesn't contain any Sass or sass-cache and node-modules
-
+* v0.8.0	Concatenate JS files and add check for SCRIPT_DEBUG and alter wp_enqueue_scripts accordingly in functions.php
 
 ## Release History
 
+* 2013-12-11	v0.4.0	Add CSS Janus, Compass, CSS &amp; JS and Grunt tasks
 * 2013-12-10	v0.3.0	Nest our Sass files.
 * 2013-12-10	v0.2.0	Yay! A smart way to include files :)
 * 2013-10-14	v0.1.0	Initial public release.
