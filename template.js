@@ -75,7 +75,7 @@ exports.template = function (grunt, init, done) {
 		},
 		{
 			name   : 'wpdotcom_support',
-			message: 'Will you use be using this on WordPress.com? [y/N]',
+			message: 'Will you use be using this on WordPress.com? [y/n]',
 			default: 'n'
 		}
 
