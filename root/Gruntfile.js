@@ -10,7 +10,8 @@ module.exports = function( grunt ) {
 		jshint: {
 			all: [
 				'Gruntfile.js',
-				'js/**/*.js'
+				'js/**/*.js',
+				'!js/**/*.min.js'
 			],
 			options: {
 				curly:   true,
@@ -48,10 +49,20 @@ module.exports = function( grunt ) {
 				options: {
 					swapLtrRtlInUrl: false
 				},
-				src: [
-					'style.css'
-				],
+				src: ['style.css'],
 				dest: 'rtl.css'
+			}
+		},
+		uglify: {
+			all: {
+				files: {
+					'js/customizer.min.js': 'js/customizer.js',
+					'js/navigation.min.js': 'js/navigation.js',
+					'js/skip-link-focus-fix.min.js': 'js/skip-link-focus-fix.js'
+				},
+				mangle: {
+					except: ['jQuery']
+				}
 			}
 		},
 		watch:  {
@@ -64,7 +75,7 @@ module.exports = function( grunt ) {
 			},
 			scripts: {
 				files: ['js/**/*.js'],
-				tasks: ['jshint'],
+				tasks: ['jshint', 'uglify'],
 				options: {
 					debounceDelay: 500
 				}
@@ -82,7 +93,7 @@ module.exports = function( grunt ) {
 	});
 	
 	// Default task.
-	grunt.registerTask( 'default', ['compass', 'cssmin', 'cssjanus:dev', 'jshint'] );
+	grunt.registerTask( 'default', ['compass', 'cssmin', 'cssjanus:dev', 'jshint', 'uglify'] );
 
 	grunt.util.linefeed = '\n';
 };
