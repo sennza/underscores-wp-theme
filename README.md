@@ -26,7 +26,7 @@ git clone git@github.com:sennza/underscores-wp-theme.git %USERPROFILE%/.grunt-in
 
 ## Usage
 
-At the command-line, cd into an empty directory, for your theme. e.g. wp-content/themes/yourtheme run this command and follow the prompts.
+At the command-line, cd into an empty directory, for your theme. e.g. wp-content/themes/yourtheme run this command and follow the prompts. The defaults in the prompts have an uppercase letter. so (n/Y) will mean 'Yes' is the default and (N/y) will mean 'No' is the default.
 
 ```
 grunt-init underscores-wp-theme
