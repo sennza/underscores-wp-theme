@@ -70,7 +70,8 @@ module.exports = function( grunt ) {
 				files: ['sass/*.scss'],
 				tasks: ['compass:dev', 'cssjanus:dev'],
 				options: {
-					debounceDelay: 500
+					debounceDelay: 500,
+					livereload: true
 				}
 			},
 			scripts: {

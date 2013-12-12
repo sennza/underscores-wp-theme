@@ -52,6 +52,10 @@ During development run
 grunt watch
 ```
 
+You can use [LiveReload](http://livereload.com/) with an appropriate [Browser extension](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-) to see "real time" changes to your compiled Sass files. I recommend that you add the `content` so you can live reload both WordPress themes and plugins.
+
+**N.B. The alpha version on Windows will work.**
+
 ##Roadmap
 
 * ~~v0.2.0	Add more prompts for files in the `inc` folder and remove those includes from `functions.php` if required.~~
