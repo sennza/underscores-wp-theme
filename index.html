@@ -1,34 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <title>Grunt &amp; Underscores WordPress Theme by sennza</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Grunt &amp; Underscores WordPress Theme</h1>
-        <h2>Generate a custom build of the Underscores WordPress theme using Grunt</h2>
-        <a href="https://github.com/sennza/underscores-wp-theme" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/sennza/underscores-wp-theme">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/sennza/underscores-wp-theme/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/sennza/underscores-wp-theme/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Grunt &amp; Underscores WordPress Theme</h1>
+          <p>Generate a custom build of the Underscores WordPress theme using Grunt</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/sennza">sennza</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
 <a name="generate-a-custom-underscores-theme-using-grunts-project-scaffolding" class="anchor" href="#generate-a-custom-underscores-theme-using-grunts-project-scaffolding"><span class="octicon octicon-link"></span></a>Generate a custom Underscores theme using Grunt's Project Scaffolding</h1>
 
 <blockquote>
@@ -62,7 +72,7 @@
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>At the command-line, cd into an empty directory, for your theme. e.g. wp-content/themes/yourtheme run this command and follow the prompts.</p>
+<p>At the command-line, cd into an empty directory, for your theme. e.g. wp-content/themes/yourtheme run this command and follow the prompts. The defaults in the prompts have an uppercase letter. so (n/Y) will mean 'Yes' is the default and (N/y) will mean 'No' is the default.</p>
 
 <pre><code>grunt-init underscores-wp-theme
 </code></pre>
@@ -83,6 +93,10 @@
 
 <pre><code>grunt watch
 </code></pre>
+
+<p>You can use <a href="http://livereload.com/">LiveReload</a> with an appropriate <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-">Browser extension</a> to see "real time" changes to your compiled Sass files. I recommend that you add the <code>content</code> so you can live reload both WordPress themes and plugins.</p>
+
+<p><strong>N.B. The alpha version on Windows will work.</strong></p>
 
 <h2>
 <a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a>Roadmap</h2>
@@ -106,25 +120,10 @@
 <li>2013-12-10    v0.2.0  Yay! A smart way to include files :)</li>
 <li>2013-10-14    v0.1.0  Initial public release.</li>
 </ul>
-        </section>
+      </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/sennza/underscores-wp-theme/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/sennza/underscores-wp-theme/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/sennza/underscores-wp-theme"></a> is maintained by <a href="https://github.com/sennza">sennza</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
     </div>
-
-  
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
