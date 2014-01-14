@@ -67,7 +67,7 @@ module.exports = function( grunt ) {
 		},
 		watch:  {
 			compass: {
-				files: ['sass/*.scss'],
+				files: ['sass/**/*.scss'],
 				tasks: ['compass:dev', 'cssjanus:dev'],
 				options: {
 					debounceDelay: 500,
