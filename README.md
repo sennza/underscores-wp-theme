@@ -22,7 +22,7 @@ git clone git@github.com:sennza/underscores-wp-theme.git %USERPROFILE%/.grunt-in
 ```
 
 ## Demo
-![Underscores WP Theme](http://www.sennza.com.au/wp-content/uploads/2013/10/underscores-wp-theme-0.4.gif "Underscores WP Theme")
+![Underscores WP Theme](http://www.sennza.com.au/wp-content/uploads/2014/02/underscores-wp-theme-0.5.gif "Underscores WP Theme")
 
 ## Usage
 
