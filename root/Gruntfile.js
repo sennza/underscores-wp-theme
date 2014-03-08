@@ -90,11 +90,26 @@ module.exports = function( grunt ) {
 					outputStyle: 'compressed'
 				}
 			}
+		},
+		imagemin: {
+			build: {
+				files: [{
+					expand: true,                // Enable dynamic expansion
+					cwd: './images/',            // Src matches are relative to this path
+					src: ['**/*.{png,jpg,gif}'], // Actual patterns to match
+					dest: './images/'
+				}],
+				options: {
+					optimizationLevel: 7
+				}
+			}
 		}
 	});
 	
 	// Default task.
-	grunt.registerTask( 'default', ['compass', 'cssmin', 'cssjanus:dev', 'jshint', 'uglify'] );
+	grunt.registerTask( 'default', [ 'compass', 'cssmin', 'cssjanus:dev', 'jshint' ] );
+	// Build task
+	grunt.registerTask( 'build',   [ 'cssmin', 'jshint', 'uglify', 'imagemin:build' ] );
 
 	grunt.util.linefeed = '\n';
 };

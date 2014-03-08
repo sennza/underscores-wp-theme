@@ -91,7 +91,9 @@ exports.template = function (grunt, init, done) {
 			'grunt-contrib-watch'  : '~0.2.0',
 			'grunt-contrib-sass'   : '~0.2.2',
 			'grunt-contrib-compass': '~0.5.0',
-			'grunt-cssjanus'       : "~0.1.1"
+			'grunt-cssjanus'       : "~0.1.1",
+			"jpegtran-bin": "0.2.0",
+    		"grunt-contrib-imagemin": "~0.5.0"
 		};
 
 		// Sanitize names where we need to for PHP/JS
