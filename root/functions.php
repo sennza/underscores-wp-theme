@@ -55,6 +55,16 @@ function {%= prefix %}_setup() {
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
 	/**
+	 * Enable support for HTML5 markup.
+	 */
+	add_theme_support( 'html5', array(
+		'comment-list',
+		'search-form',
+		'comment-form',
+		'gallery',
+	) );
+
+	/**
 	 * Setup the WordPress core custom background feature.
 	 */
 	add_theme_support( 'custom-background', apply_filters( '{%= prefix %}_custom_background_args', array(
